@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7faf7" />
+
+  <!-- Primary SEO -->
+  <title>Online Journal — A Tactile Digital Sanctuary for Reflection & Daily Writing</title>
+  <meta name="description" content="Online Journal is a warm, private digital notebook for morning pages, gratitude, mood tracking, dream logs, and mindful reflection. Encrypted, offline-first, ad-free journaling." />
+  <meta name="keywords" content="online journal, digital diary, journaling app, gratitude journal, mood tracker, morning pages, dream journal, CBT journal, personal diary" />
+  <meta name="author" content="Online Journal" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://onlinejournal.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://onlinejournal.github.io/" />
+  <meta property="og:title" content="Online Journal — Your Life, One Page at a Time" />
+  <meta property="og:description" content="A tactile digital sanctuary for honest thoughts, daily reflections, and quiet epiphanies. Private, encrypted, and beautifully analog." />
+  <meta property="og:image" content="https://onlinejournal.github.io/assets/og-cover.jpg" />
+  <meta property="og:site_name" content="Online Journal" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Online Journal — Your Life, One Page at a Time" />
+  <meta name="twitter:description" content="A tactile digital sanctuary for daily reflection, gratitude, and mindful writing." />
+  <meta name="twitter:image" content="https://onlinejournal.github.io/assets/og-cover.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231e2b37'/%3E%3Cpath d='M30 25h40v50H30z' fill='%23fdfaf6'/%3E%3Cpath d='M38 35h24M38 45h24M38 55h16' stroke='%231e2b37' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Online Journal",
+    "url": "https://onlinejournal.github.io/",
+    "description": "A warm, private digital notebook for morning pages, gratitude, mood tracking, dream logs, and mindful reflection.",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Encrypted journaling",
+      "Mood tracking",
+      "Habit tracking",
+      "Gratitude jar",
+      "Dream journal",
+      "CBT templates",
+      "Writing prompts",
+      "Offline-first auto-save"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "1284"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Online Journal",
+    "url": "https://onlinejournal.github.io/",
+    "logo": "https://onlinejournal.github.io/assets/logo.svg",
+    "sameAs": []
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Online Journal private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every entry is encrypted client-side with zero-knowledge encryption. We never see your words."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Online Journal free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Core notebooks, writing tools, and prompts are free forever with no ads."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Online Journal is offline-first and auto-saves your entries locally."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header injected by js/header.js -->
+  <div id="site-header"></div>
+
+  <main id="main" class="site-main">
+
+    <!-- ============================= -->
+    <!-- 1. HERO                       -->
+    <!-- ============================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__glow hero__glow--sage" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--terra" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__ribbon reveal">
+          <span class="dot dot--sage" aria-hidden="true"></span>
+          <span class="label label-sm text-sage">Analog Soul • Modern Sanctuary</span>
+          <span class="hero__divider" aria-hidden="true">/</span>
+          <span class="label label-sm muted">
+            <span class="material-symbols-outlined icon-xs text-terra" aria-hidden="true">lock</span>
+            Zero-Knowledge Client Encryption
+          </span>
+        </div>
+
+        <h1 id="hero-title" class="hero__title reveal">
+          Your life,
+          <em>one page at a time.</em>
+        </h1>
+
+        <p class="hero__lede reveal">
+          A tactile sanctuary for honest thoughts, daily reflections, quiet epiphanies, and personal growth.
+          Your private digital paper notebook that feels lovingly handmade.
+        </p>
+
+        <div class="hero__cta reveal">
+          <a href="#toolbox" class="btn btn-primary">
+            <span class="material-symbols-outlined" aria-hidden="true">history_edu</span>
+            Start Writing Free
+          </a>
+          <a href="#toolbox" class="btn btn-secondary">
+            <span class="material-symbols-outlined text-sage" aria-hidden="true">explore</span>
+            Explore Journaling Tools
+          </a>
+        </div>
+
+        <ul class="hero__trust reveal" aria-label="Trust indicators">
+          <li><span class="material-symbols-outlined icon-sm text-sage" aria-hidden="true">verified_user</span> 100% Private &amp; Client-Side Encrypted</li>
+          <li><span class="material-symbols-outlined icon-sm text-sage" aria-hidden="true">offline_bolt</span> Offline-First Auto-Save</li>
+          <li><span class="material-symbols-outlined icon-sm text-sage" aria-hidden="true">spa</span> Distraction-Free Workspace</li>
+        </ul>
+
+        <!-- Dual-page journal mockup -->
+        <div class="book" aria-hidden="true">
+          <div class="book__shadow"></div>
+          <div class="book__frame">
+            <div class="book__spine">
+              <span class="book__ring"></span><span class="book__ring"></span>
+              <span class="book__ring"></span><span class="book__ring"></span>
+              <span class="book__ring"></span><span class="book__ring"></span>
+              <span class="book__ring"></span><span class="book__ring"></span>
+            </div>
+            <div class="book__pages">
+              <!-- Left page -->
+              <div class="page page--left">
+                <div class="washi washi--blush" aria-hidden="true"></div>
+                <div class="page__meta">
+                  <div>
+                    <span class="label label-sm muted">Journal Entry #412</span>
+                    <h3 class="page__title">Morning Pages — Oct 24</h3>
+                  </div>
+                  <div class="page__pills">
+                    <span class="pill pill--surface"><span class="material-symbols-outlined icon-xs text-amber" aria-hidden="true">wb_sunny</span> 62°F Brisk</span>
+                    <span class="pill pill--sage"><span class="dot dot--sage"></span> Serene</span>
+                  </div>
+                </div>
+                <div class="page__body">
+                  <p class="dropcap">The morning mist settled over the brick fire escapes before anyone else in the apartment woke up. Steam rising from black cardamom tea, the slow rhythm of the radiator clicking against the cold exterior wall.</p>
+                  <p>I am slowly unlearning the impulse to measure every quiet second by its productivity. Today, existence alone is sufficient.</p>
+                  <p class="page__quote">"Give yourself permission to write terribly, honestly, and without an audience."</p>
+                </div>
+                <div class="page__footer">
+                  <span><span class="material-symbols-outlined icon-xs text-terra" aria-hidden="true">local_florist</span> Pressed Wild Sage Leaf Attached</span>
+                  <span>07:14 AM • 342 words</span>
+                </div>
+              </div>
+              <!-- Right page -->
+              <div class="page page--right">
+                <div class="washi washi--sage" aria-hidden="true"></div>
+                <div class="page__meta">
+                  <div class="page__meta-row">
+                    <span class="material-symbols-outlined icon-sm text-sage" aria-hidden="true">grid_goldenratio</span>
+                    <span class="label label-md">Daily Field Notes &amp; Habits</span>
+                  </div>
+                  <span class="label label-sm muted">Dot Grid 5mm</span>
+                </div>
+                <div class="habits-mini">
+                  <div class="habit-mini"><span class="label label-sm muted">Meditation</span><strong>20m ✓</strong></div>
+                  <div class="habit-mini"><span class="label label-sm muted">Hydration</span><strong>2.2L ✓</strong></div>
+                  <div class="habit-mini"><span class="label label-sm muted">Offline Walk</span><strong class="text-terra">45m ✓</strong></div>
+                </div>
+                <div class="page__visuals">
+                  <div class="polaroid">
+                    <div class="washi washi--mustard washi--sm" aria-hidden="true"></div>
+                    <div class="polaroid__img" role="img" aria-label="Warm sunlight on a ceramic mug beside an open notebook"></div>
+                    <p class="polaroid__caption">The 8 AM amber light</p>
+                  </div>
+                  <div class="note note--mustard">
+                    <span class="label label-sm text-terra">3 Tiny Gratitudes</span>
+                    <ul>
+                      <li>Crisp morning wind through the park</li>
+                      <li>Fresh sourdough loaf baked warm</li>
+                      <li>Reconnecting with an old friend</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="page__tags">
+                  <span class="label label-sm muted">Tags:</span>
+                  <span class="tag">#Mindfulness</span>
+                  <span class="tag">#AutumnReflections</span>
+                  <span class="tag tag--sage">#WritingRituals</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- 2. DAILY REFLECTION           -->
+    <!-- ============================= -->
+    <section class="section container" aria-labelledby="today-title">
+      <article class="card card--pinned reveal">
+        <span class="paperclip" aria-hidden="true"></span>
+        <header class="card__head">
+          <div class="card__head-left">
+            <span class="dot dot--terra dot--pulse" aria-hidden="true"></span>
+            <h2 id="today-title" class="headline-sm">Daily Reflection • <time datetime="2026-09-28">Sunday, September 28</time></h2>
+          </div>
+          <div class="card__head-right">
+            <span class="pill pill--terra">🔥 <span id="streak-count">42</span>-Day Writing Streak</span>
+            <span class="label label-sm muted">Auto-saved 2m ago</span>
+          </div>
+        </header>
+
+        <div class="prompt-banner">
+          <div class="prompt-banner__left">
+            <span class="material-symbols-outlined text-sage" aria-hidden="true">auto_awesome</span>
+            <div>
+              <span class="label label-sm text-sage">Today's Writing Prompt</span>
+              <p class="prompt-text" id="prompt-text">"What is a small, quiet moment from yesterday that you never want to forget?"</p>
+            </div>
+          </div>
+          <button class="btn btn-ghost" id="btn-next-prompt" type="button">
+            <span class="material-symbols-outlined" aria-hidden="true">autorenew</span> Another Prompt
+          </button>
+        </div>
+
+        <div class="mood">
+          <label class="label label-sm muted">How does your heart feel right now?</label>
+          <div class="mood__grid" id="mood-selector" role="radiogroup" aria-label="Mood selector">
+            <button class="mood-btn" data-mood="Joyful" type="button" role="radio" aria-checked="false"><span class="mood-btn__emoji">☀️</span><span class="mood-btn__label">Joyful</span><span class="mood-btn__sub">radiant</span></button>
+            <button class="mood-btn is-active" data-mood="Centered" type="button" role="radio" aria-checked="true"><span class="mood-btn__emoji">🌿</span><span class="mood-btn__label">Centered</span><span class="mood-btn__sub">grounded</span></button>
+            <button class="mood-btn" data-mood="Reflective" type="button" role="radio" aria-checked="false"><span class="mood-btn__emoji">🌙</span><span class="mood-btn__label">Reflective</span><span class="mood-btn__sub">inward</span></button>
+            <button class="mood-btn" data-mood="Peaceful" type="button" role="radio" aria-checked="false"><span class="mood-btn__emoji">🕊️</span><span class="mood-btn__label">Peaceful</span><span class="mood-btn__sub">still</span></button>
+            <button class="mood-btn" data-mood="Overwhelmed" type="button" role="radio" aria-checked="false"><span class="mood-btn__emoji">🌧️</span><span class="mood-btn__label">Overwhelmed</span><span class="mood-btn__sub">holding space</span></button>
+          </div>
+        </div>
+
+        <textarea class="quick-write" id="quick-entry-input" rows="5" placeholder="Begin writing here... let your pen flow freely without judgment or punctuation checks." aria-label="Quick write entry"></textarea>
+
+        <footer class="card__foot">
+          <div class="card__foot-left">
+            <button class="pill pill--surface" type="button"><span class="material-symbols-outlined icon-sm text-sage" aria-hidden="true">graphic_eq</span> Lo-fi Rain on Leaves</button>
+            <span class="label label-sm muted"><span class="material-symbols-outlined icon-sm" aria-hidden="true">location_on</span> Brooklyn, NY • 64°F Breezy</span>
+          </div>
+          <div class="card__foot-right">
+            <span class="label label-sm muted" id="char-counter">0 words written</span>
+            <button class="btn btn-terra" type="button"><span class="material-symbols-outlined" aria-hidden="true">save</span> Save to Morning Pages</button>
+          </div>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ============================= -->
+    <!-- 3. RECENT ENTRIES             -->
+    <!-- ============================= -->
+    <section class="section container" aria-labelledby="recent-title">
+      <header class="section__head">
+        <div>
+          <span class="label label-sm text-sage">Archived Pages</span>
+          <h2 id="recent-title" class="headline-lg">Recent Pages in Your Journal</h2>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Filter entries">
+          <button class="tab is-active" role="tab" aria-selected="true" type="button">All Pages (128)</button>
+          <button class="tab" role="tab" aria-selected="false" type="button">Reflections</button>
+          <button class="tab" role="tab" aria-selected="false" type="button">Dreams</button>
+          <button class="tab" role="tab" aria-selected="false" type="button">Travel Logs</button>
+          <button class="tab" role="tab" aria-selected="false" type="button">Morning Pages</button>
+        </div>
+      </header>
+
+      <div class="entries">
+        <!-- Card 1 -->
+        <article class="entry reveal">
+          <div class="washi washi--sage washi--top" aria-hidden="true"></div>
+          <header class="entry__meta">
+            <div><time datetime="2024-10-23">October 23, 2024</time> <span aria-hidden="true">•</span> 840 words</div>
+            <span class="pill pill--sage">Calm &amp; Grounded</span>
+          </header>
+          <h3 class="entry__title">The scent of rain on cedar boards</h3>
+          <p class="entry__excerpt">I left the screened window cracked open while the downpour washed over the cedar patio outside. There is a deep, primal reassurance in the sound of rain falling on wood, a reminder that the world can cleanse itself if given enough space...</p>
+          <div class="entry__audio">
+            <span><span class="material-symbols-outlined text-terra" aria-hidden="true">mic</span> <strong>02:14 Voice Note Attached</strong></span>
+            <button class="link" type="button"><span class="material-symbols-outlined icon-sm" aria-hidden="true">play_circle</span> Listen</button>
+          </div>
+          <footer class="entry__foot">
+            <div class="entry__tags"><span>#solitude</span><span>#sensory</span></div>
+            <div class="entry__actions">
+              <button aria-label="Quick read" type="button"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span></button>
+              <button aria-label="Edit entry" type="button"><span class="material-symbols-outlined" aria-hidden="true">edit_note</span></button>
+              <button aria-label="Private lock" type="button"><span class="material-symbols-outlined" aria-hidden="true">lock</span></button>
+            </div>
+          </footer>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="entry reveal">
+          <span class="dogear" aria-hidden="true"></span>
+          <header class="entry__meta">
+            <div><time datetime="2024-10-22">October 22, 2024</time> <span aria-hidden="true">•</span> 1,120 words</div>
+            <span class="pill pill--surface">Reflective</span>
+          </header>
+          <h3 class="entry__title">Midnight thoughts on letting go of perfectionism</h3>
+          <p class="entry__excerpt">Caught myself spiraling into the belief that if an essay isn't revolutionary on draft one, it shouldn't exist at all. I took out my favorite pen, scribbled three messy sentences intentionally wrong, and laughed out loud at the silliness of self-imposed stakes...</p>
+          <div class="insight insight--blush">
+            <span class="material-symbols-outlined icon-sm" aria-hidden="true">psychology</span>
+            CBT Reframing: Categorized under 'Catastrophizing &amp; Release'
+          </div>
+          <footer class="entry__foot">
+            <div class="entry__tags"><span>#cbt</span><span>#mentalhealth</span><span>#growth</span></div>
+            <div class="entry__actions">
+              <button aria-label="Quick read" type="button"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span></button>
+              <button aria-label="Edit entry" type="button"><span class="material-symbols-outlined" aria-hidden="true">edit_note</span></button>
+              <button aria-label="Private lock" type="button"><span class="material-symbols-outlined" aria-hidden="true">lock</span></button>
+            </div>
+          </footer>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="entry reveal">
+          <div class="washi washi--mustard washi--top" aria-hidden="true"></div>
+          <header class="entry__meta">
+            <div><time datetime="2024-10-20">October 20, 2024</time> <span aria-hidden="true">•</span> 650 words</div>
+            <span class="pill pill--amber">Joyful</span>
+          </header>
+          <div class="entry__split">
+            <div>
+              <h3 class="entry__title">Tokyo coffee alleyways &amp; morning sketches</h3>
+              <p class="entry__excerpt">Found a kissaten tucked into Yanaka with hand-dripped mandheling coffee. The master didn't speak English and I spoke minimal Japanese, yet we shared twenty serene minutes watching steam curl upward...</p>
+            </div>
+            <div class="entry__thumb" role="img" aria-label="Cozy Tokyo kissaten with warm lamp light"></div>
+          </div>
+          <footer class="entry__foot">
+            <div class="entry__tags"><span>#tokyo</span><span>#kissaten</span><span>#travel</span></div>
+            <div class="entry__actions">
+              <button aria-label="Quick read" type="button"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span></button>
+              <button aria-label="Edit entry" type="button"><span class="material-symbols-outlined" aria-hidden="true">edit_note</span></button>
+              <button aria-label="Private lock" type="button"><span class="material-symbols-outlined" aria-hidden="true">lock</span></button>
+            </div>
+          </footer>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="entry reveal">
+          <div class="washi washi--lilac washi--top" aria-hidden="true"></div>
+          <header class="entry__meta">
+            <div><time datetime="2024-10-19">October 19, 2024</time> <span aria-hidden="true">•</span> 430 words</div>
+            <span class="pill pill--indigo">Dream Archive</span>
+          </header>
+          <h3 class="entry__title">Dream log: The library with infinite bridges</h3>
+          <p class="entry__excerpt">I was walking through an atrium whose walls were entirely filled with unwritten manuscripts bound in navy velvet. Between every bookshelf stretched slender wooden arched bridges over calm, reflective black water...</p>
+          <div class="insight insight--surface">
+            <span class="material-symbols-outlined icon-sm text-indigo" aria-hidden="true">bedtime</span>
+            Vivid Dream Recall • High Clarity
+            <span class="muted">Sleep Cycle 4</span>
+          </div>
+          <footer class="entry__foot">
+            <div class="entry__tags"><span>#luciddream</span><span>#subconscious</span></div>
+            <div class="entry__actions">
+              <button aria-label="Quick read" type="button"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span></button>
+              <button aria-label="Edit entry" type="button"><span class="material-symbols-outlined" aria-hidden="true">edit_note</span></button>
+              <button aria-label="Private lock" type="button"><span class="material-symbols-outlined" aria-hidden="true">lock</span></button>
+            </div>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- 4. MOOD & HABITS              -->
+    <!-- ============================= -->
+    <section class="section container" aria-labelledby="mood-title">
+      <div class="card card--split">
+        <!-- Left: Emotional weather -->
+        <div class="split__col">
+          <header class="split__head">
+            <div>
+              <span class="label label-sm text-sage">Self-Awareness</span>
+              <h3 id="mood-title" class="headline-lg">Emotional Weather &amp; Mood Arc</h3>
+            </div>
+            <span class="pill pill--sage">Past 7 Days</span>
+          </header>
+          <p class="body-sm muted">Your predominant baseline this week has been <strong class="text-ink">Grounded &amp; Creative</strong>, with minimal anxiety spikes compared to last month.</p>
+
+          <div class="chart">
+            <div class="chart__meta"><span>High Energy / Serene</span><span>Average: 8.4/10</span></div>
+            <svg class="chart__svg" viewBox="0 0 350 90" preserveAspectRatio="none" role="img" aria-label="Mood trend over the past 7 days">
+              <defs>
+                <linearGradient id="moodGradient" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#466557" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#466557" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M 0 50 Q 55 10, 110 35 T 220 20 T 350 15 L 350 90 L 0 90 Z" fill="url(#moodGradient)"/>
+              <path d="M 0 50 Q 55 10, 110 35 T 220 20 T 350 15" stroke="#466557" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <circle cx="0"   cy="50" r="4" fill="#fdfaf6" stroke="#466557" stroke-width="2"/>
+              <circle cx="58"  cy="22" r="4" fill="#fdfaf6" stroke="#466557" stroke-width="2"/>
+              <circle cx="116" cy="36" r="4" fill="#fdfaf6" stroke="#466557" stroke-width="2"/>
+              <circle cx="175" cy="45" r="4" fill="#fdfaf6" stroke="#466557" stroke-width="2"/>
+              <circle cx="233" cy="21" r="4" fill="#fdfaf6" stroke="#466557" stroke-width="2"/>
+              <circle cx="291" cy="28" r="4" fill="#fdfaf6" stroke="#466557" stroke-width="2"/>
+              <circle cx="350" cy="15" r="5" fill="#521401" stroke="#fdfaf6" stroke-width="2"/>
+            </svg>
+            <div class="chart__labels">
+              <span>Fri</span><span>Sat</span><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span class="is-today">Today</span>
+            </div>
+          </div>
+
+          <div class="mood-breakdown">
+            <div><strong>45%</strong><span>Centered</span></div>
+            <div><strong>30%</strong><span>Joyful</span></div>
+            <div><strong>15%</strong><span>Inward</span></div>
+            <div><strong>10%</strong><span>Fatigued</span></div>
+          </div>
+
+          <footer class="split__foot">
+            <span class="muted">Tracked seamlessly with morning entries</span>
+            <a href="#" class="link">View Monthly Trend →</a>
+          </footer>
+        </div>
+
+        <!-- Right: Habits -->
+        <div class="split__col">
+          <header class="split__head">
+            <div>
+              <span class="label label-sm text-sage">Rituals &amp; Consistency</span>
+              <h3 class="headline-lg">Tactile Daily Habits</h3>
+            </div>
+            <span class="label label-sm muted">Week 43</span>
+          </header>
+          <p class="body-sm muted">Habit tracking designed to feel like hand-inked checks in a classic dotted notebook.</p>
+
+          <ul class="habits">
+            <li class="habit"><span class="habit__check">✓</span><span class="habit__label">Morning Reflection (Morning Pages)</span><span class="habit__stat">7 / 7 days 🌟</span></li>
+            <li class="habit"><span class="habit__check">✓</span><span class="habit__label">Read 20 minutes before bed</span><span class="habit__stat">6 / 7 days ●</span></li>
+            <li class="habit"><span class="habit__check">✓</span><span class="habit__label">Daily Hydration (2+ Liters)</span><span class="habit__stat">5 / 7 days ●</span></li>
+            <li class="habit"><span class="habit__check">✓</span><span class="habit__label">Evening Gratitude Trifecta</span><span class="habit__stat">7 / 7 days 🌟</span></li>
+            <li class="habit habit--pending"><span class="habit__check"></span><span class="habit__label">Digital Sunset at 10 PM</span><span class="habit__stat">4 / 7 days ○</span></li>
+          </ul>
+
+          <footer class="split__foot">
+            <span class="text-sage">✨ 88% Weekly Completion Rate</span>
+            <button class="link" type="button">+ Add Custom Habit</button>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- 5. CALENDAR & TIMELINE        -->
+    <!-- ============================= -->
+    <section class="section container" aria-labelledby="cal-title">
+      <div class="card card--calendar">
+        <header class="cal__head">
+          <div>
+            <span class="label label-sm text-sage">Time Machine</span>
+            <h3 id="cal-title" class="headline-lg">October 2024 Archive</h3>
+          </div>
+          <div class="chips">
+            <span class="chip chip--active">All Notebooks</span>
+            <span class="chip">By Mood: Joyful</span>
+            <span class="chip">With Photos</span>
+            <span class="chip">Audio Only</span>
+          </div>
+        </header>
+
+        <div class="cal__grid-wrap">
+          <!-- Calendar -->
+          <div class="cal">
+            <div class="cal__dow"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+            <div class="cal__days" id="cal-days">
+              <!-- Populated by main.js -->
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <aside class="timeline">
+            <header class="timeline__head">
+              <span class="label label-md">Chronological Stream</span>
+              <span class="label label-sm text-sage">October 20–24</span>
+            </header>
+            <ol class="timeline__list">
+              <li class="timeline__item timeline__item--terra">
+                <span class="timeline__dot"></span>
+                <span class="label label-sm muted">Today • 07:14 AM</span>
+                <p class="timeline__title">Morning Pages — Oct 24</p>
+                <p class="timeline__excerpt">The mist settled over the brick fire escapes...</p>
+              </li>
+              <li class="timeline__item timeline__item--sage">
+                <span class="timeline__dot"></span>
+                <span class="label label-sm muted">Yesterday • 09:30 PM</span>
+                <p class="timeline__title">The scent of rain on cedar boards</p>
+                <p class="timeline__excerpt">Screened window cracked open while downpour washed...</p>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__dot"></span>
+                <span class="label label-sm muted">Oct 22 • 11:45 PM</span>
+                <p class="timeline__title">Letting go of perfectionism</p>
+                <p class="timeline__excerpt">Scribbled three messy sentences intentionally wrong...</p>
+              </li>
+            </ol>
+            <button class="btn btn-secondary btn--full" type="button">Open Full Timeline Archive →</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- 6. NOTEBOOKS SHELF            -->
+    <!-- ============================= -->
+    <section class="section container" aria-labelledby="shelf-title">
+      <header class="section__head">
+        <div>
+          <span class="label label-sm text-sage">Your Library Shelf</span>
+          <h2 id="shelf-title" class="headline-lg">Digital Notebook Stacks</h2>
+        </div>
+        <button class="btn btn-ghost" type="button"><span class="material-symbols-outlined" aria-hidden="true">sort</span> Organize Shelves</button>
+      </header>
+
+      <div class="shelf">
+        <article class="book-spine book-spine--terra">
+          <span class="book-spine__line"></span>
+          <span class="material-symbols-outlined" aria-hidden="true">book</span>
+          <h3>Daily Reflections</h3>
+          <span class="book-spine__count">48 entries</span>
+          <footer class="book-spine__foot">Updated today</footer>
+        </article>
+
+        <article class="book-spine book-spine--sage">
+          <span class="book-spine__line"></span>
+          <span class="material-symbols-outlined" aria-hidden="true">flight_takeoff</span>
+          <h3>Travel Chronicles</h3>
+          <span class="book-spine__count">18 entries</span>
+          <footer class="book-spine__foot">Gold foil spine</footer>
+        </article>
+
+        <article class="book-spine book-spine--mustard">
+          <span class="book-spine__line"></span>
+          <span class="material-symbols-outlined" aria-hidden="true">volunteer_activism</span>
+          <h3>Gratitude Jar</h3>
+          <span class="book-spine__count">94 entries</span>
+          <footer class="book-spine__foot">Linen cloth</footer>
+        </article>
+
+        <article class="book-spine book-spine--ink">
+          <span class="book-spine__line"></span>
+          <span class="material-symbols-outlined" aria-hidden="true">nights_stay</span>
+          <h3>Dreams &amp; Epiphanies</h3>
+          <span class="book-spine__count">32 entries</span>
+          <footer class="book-spine__foot">Midnight blue</footer>
+        </article>
+
+        <article class="book-spine book-spine--lilac">
+          <span class="book-spine__line"></span>
+          <div class="book-spine__row">
+            <span class="material-symbols-outlined" aria-hidden="true">psychology</span>
+            <span class="material-symbols-outlined icon-sm text-amber" aria-hidden="true">lock</span>
+          </div>
+          <h3>Therapy &amp; CBT</h3>
+          <span class="book-spine__count">21 entries</span>
+          <footer class="book-spine__foot">Encrypted PIN</footer>
+        </article>
+
+        <article class="book-spine book-spine--kraft">
+          <span class="book-spine__line"></span>
+          <span class="material-symbols-outlined" aria-hidden="true">auto_fix</span>
+          <h3>Creative Sparks</h3>
+          <span class="book-spine__count">15 entries</span>
+          <footer class="book-spine__foot">Kraft recycled</footer>
+        </article>
+
+        <button class="book-new" type="button">
+          <span class="book-new__icon"><span class="material-symbols-outlined" aria-hidden="true">add</span></span>
+          <span class="book-new__label">+ New Notebook</span>
+          <span class="book-new__sub">Custom spine &amp; cover</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- 7. STATS & INSIGHTS           -->
+    <!-- ============================= -->
+    <section class="section container" aria-labelledby="stats-title">
+      <div class="card card--stats">
+        <header class="section__head section__head--border">
+          <div>
+            <span class="label label-sm text-sage">Vintage Letterpress Ledger</span>
+            <h3 id="stats-title" class="headline-lg">Your Journaling Rhythm &amp; Output</h3>
+          </div>
+          <span class="label label-sm muted">Updated this morning</span>
+        </header>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="label label-sm muted">Total Words Penned</span>
+            <strong class="stat__num">38,420</strong>
+            <p class="body-sm muted">Equivalent to a 150-page trade paperback novel!</p>
+            <footer class="stat__foot text-sage"><span class="material-symbols-outlined icon-sm" aria-hidden="true">trending_up</span> +3,840 words this week</footer>
+          </div>
+
+          <div class="stat">
+            <span class="label label-sm muted">Unbroken Streak</span>
+            <strong class="stat__num text-terra">42 Days</strong>
+            <p class="body-sm muted">Started September 12th. Your all-time personal record!</p>
+            <footer class="stat__foot text-terra">🔥 Next badge at 50 days</footer>
+          </div>
+
+          <div class="stat">
+            <span class="label label-sm muted">Peak Creative Hour</span>
+            <strong class="stat__num">7:30 AM</strong>
+            <p class="body-sm muted">Morning clarity sessions yield your deepest reflective word counts.</p>
+            <footer class="stat__foot text-sage"><span class="material-symbols-outlined icon-sm" aria-hidden="true">wb_twilight</span> Dawn Scribe</footer>
+          </div>
+
+          <div class="stat">
+            <span class="label label-sm muted">Most Frequent Themes</span>
+            <div class="stat__tags">
+              <span>Gratitude (34%)</span>
+              <span>Compassion (28%)</span>
+              <span>Curiosity (22%)</span>
+            </div>
+            <footer class="stat__foot muted">Analyzed via local on-device NLP</footer>
+          </div>
+        </div>
+
+        <div class="stats__lower">
+          <div class="volume">
+            <header class="volume__head"><span class="label label-md">Monthly Word Volume (2024)</span><span class="label label-sm muted">Ink density meter</span></header>
+            <div class="volume__chart">
+              <div class="bar"><div style="height:35%"></div><span>May</span></div>
+              <div class="bar"><div style="height:50%"></div><span>Jun</span></div>
+              <div class="bar"><div style="height:65%"></div><span>Jul</span></div>
+              <div class="bar bar--sage"><div style="height:80%"></div><span>Aug</span></div>
+              <div class="bar bar--sage"><div style="height:90%"></div><span>Sep</span></div>
+              <div class="bar bar--terra"><div style="height:100%"></div><span class="is-active">Oct</span></div>
+            </div>
+          </div>
+
+          <div class="badges">
+            <span class="label label-md">Earned Stationery Badges</span>
+            <div class="badges__grid">
+              <div class="badge"><span>🪶</span><strong>Early Bird Scribe</strong><span>30 morning entries</span></div>
+              <div class="badge"><span>💯</span><strong>Century Mark</strong><span>100+ lifetime entries</span></div>
+              <div class="badge"><span>🧭</span><strong>Deep Diver</strong><span>1,000+ word reflections</span></div>
+              <div class="badge"><span>🌿</span><strong>Mindful Seeker</strong><span>28-day habit streak</span></div>
+            </div>
+            <div class="badges__foot"><a href="#" class="link">View All 18 Badges →</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- 8. TEMPLATES                  -->
+    <!-- ============================= -->
+    <section class="section container" aria-labelledby="templates-title">
+      <header class="section__head">
+        <div>
+          <span class="label label-sm text-sage">Structured Rituals</span>
+          <h2 id="templates-title" class="headline-lg">Featured Journal Templates</h2>
+        </div>
+        <p class="body-sm muted section__lede">Need inspiration? Jump straight into thoughtful guided inquiries designed by psychologists and seasoned writers.</p>
+      </header>
+
+      <div class="templates">
+        <article class="template">
+          <span class="chip chip--amber">5 Minutes</span>
+          <h3>The 5-Minute Morning Journal</h3>
+          <p>Three simple questions to prime your attention, clarify top intentions, and cultivate calm before email.</p>
+          <button class="btn btn-ghost btn--full" type="button">Use Template</button>
+        </article>
+        <article class="template">
+          <span class="chip chip--lilac">Therapeutic</span>
+          <h3>CBT Thought Unraveller</h3>
+          <p>Catch cognitive distortions gently. Document situation, automatic reaction, evidence against, and balanced view.</p>
+          <button class="btn btn-ghost btn--full" type="button">Use Template</button>
+        </article>
+        <article class="template">
+          <span class="chip chip--emerald">Evening</span>
+          <h3>Evening Gratitude Trifecta</h3>
+          <p>Three distinct things that went right today, why they mattered, and what tomorrow can build upon.</p>
+          <button class="btn btn-ghost btn--full" type="button">Use Template</button>
+        </article>
+        <article class="template">
+          <span class="chip chip--blue">Weekly</span>
+          <h3>Weekly Solitude Review</h3>
+          <p>Step back from the noise. Review what energized you, what drained you, and pick a single anchor habit.</p>
+          <button class="btn btn-ghost btn--full" type="button">Use Template</button>
+        </article>
+        <article class="template">
+          <span class="chip chip--rose">Somatic</span>
+          <h3>The Somatic Body Scan</h3>
+          <p>Move awareness from toes to crown. Note where physical tension hides and give it compassionate voice.</p>
+          <button class="btn btn-ghost btn--full" type="button">Use Template</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- 9. MORE TOOLS                 -->
+    <!-- ============================= -->
+    <section class="section container" id="toolbox" aria-labelledby="tools-title">
+      <div class="toolbox">
+        <header class="toolbox__head">
+          <div>
+            <div class="toolbox__overline">
+              <span class="material-symbols-outlined text-sage" aria-hidden="true">handyman</span>
+              <span class="label label-sm text-sage">Artisanal Drawer</span>
+            </div>
+            <h2 id="tools-title" class="headline-lg">16 Bespoke Journaling Utilities</h2>
+          </div>
+          <div class="toolbox__controls">
+            <label class="toolbox__search">
+              <span class="material-symbols-outlined" aria-hidden="true">search</span>
+              <input type="search" id="tool-search" placeholder="Filter journaling tools..." aria-label="Filter tools" />
+            </label>
+            <div class="toolbox__tabs" role="tablist">
+              <button class="ttab is-active" role="tab" aria-selected="true" type="button" data-filter="all">All (16)</button>
+              <button class="ttab" role="tab" aria-selected="false" type="button" data-filter="write">Write</button>
+              <button class="ttab" role="tab" aria-selected="false" type="button" data-filter="reflect">Reflect</button>
+              <button class="ttab" role="tab" aria-selected="false" type="button" data-filter="track">Track</button>
+            </div>
+          </div>
+        </header>
+
+        <div class="toolbox__recent">
+          <span class="label label-sm muted">Recently Pulled:</span>
+          <button class="chip chip--ghost" type="button"><span class="material-symbols-outlined icon-sm text-amber" aria-hidden="true">volunteer_activism</span> Gratitude Jar</button>
+          <button class="chip chip--ghost" type="button"><span class="material-symbols-outlined icon-sm text-indigo" aria-hidden="true">timer</span> Focus Timer</button>
+          <button class="chip chip--ghost" type="button"><span class="material-symbols-outlined icon-sm text-sage" aria-hidden="true">psychology</span> Brain Dump</button>
+          <button class="chip chip--ghost" type="button"><span class="material-symbols-outlined icon-sm text-rose" aria-hidden="true">style</span> Affirmation Cards</button>
+        </div>
+
+        <div class="tools" id="tools-grid">
+          <!-- Tools injected by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- 10. COMMUNITY                 -->
+    <!-- ============================= -->
+    <section class="section container" aria-labelledby="community-title">
+      <header class="section__head">
+        <div>
+          <span class="label label-sm text-sage">The Quiet Courtyard</span>
+          <h2 id="community-title" class="headline-lg">Anonymous Shared Reflections</h2>
+        </div>
+        <div class="community__badge">
+          <span class="dot dot--live"></span>
+          <span class="label label-sm muted">Algorithm-Free • No Likes • No Vanity Metrics</span>
+        </div>
+      </header>
+
+      <div class="courtyard">
+        <article class="courtyard__entry courtyard__entry--terra">
+          <span class="wax-seal wax-seal--terra" aria-hidden="true">📜</span>
+          <span class="label label-sm muted">Anonymous from Edinburgh • Morning Pages</span>
+          <h3 class="headline-md">On walking through morning fog</h3>
+          <p class="italic">"For twenty years I rushed everywhere with headphones blaring podcasts at 1.5x speed. Today I walked the perimeter of Holyrood Park in complete silence. The damp air smelling of gorse bushes taught me more in forty minutes than three years of self-help audiobooks."</p>
+          <footer class="courtyard__foot">
+            <span>Resonated with 142 fellow writers</span>
+            <button class="link" type="button"><span class="material-symbols-outlined icon-sm" aria-hidden="true">favorite_border</span> Quiet Resonance</button>
+          </footer>
+        </article>
+
+        <article class="courtyard__entry courtyard__entry--sage">
+          <span class="wax-seal wax-seal--sage" aria-hidden="true">🍵</span>
+          <span class="label label-sm muted">Anonymous from Kyoto • Evening Reflection</span>
+          <h3 class="headline-md">Seasonal shifts in a small kitchen</h3>
+          <p class="italic">"Chopping sweet kabocha squash with the same dull knife my grandmother brought when she moved here. The weather turned colder today. It struck me that seasons do not rush themselves into arrival; they simply let their warmth dissolve gently until crispness remains."</p>
+          <footer class="courtyard__foot">
+            <span>Resonated with 198 fellow writers</span>
+            <button class="link" type="button"><span class="material-symbols-outlined icon-sm" aria-hidden="true">favorite_border</span> Quiet Resonance</button>
+          </footer>
+        </article>
+      </div>
+
+      <div class="courtyard__cta">
+        <div class="courtyard__cta-left">
+          <span class="courtyard__cta-icon">🕊️</span>
+          <div>
+            <h4 class="headline-sm">Contribute a Reflection Anonymously</h4>
+            <p class="body-sm muted">Share a snippet of your truth with no username, no follower count, and no social pressure.</p>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="button">Submit to The Courtyard</button>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- 11. FINAL CTA                 -->
+    <!-- ============================= -->
+    <section class="section container section--cta" aria-labelledby="cta-title">
+      <div class="cta">
+        <span class="cta__ribbon" aria-hidden="true"></span>
+        <h2 id="cta-title" class="display-lg">Give your thoughts a permanent home.</h2>
+        <p class="body-lg muted">Start writing today. Free forever for your core notebooks, zero ads, and zero surveillance.</p>
+        <div class="cta__actions">
+          <button class="btn btn-primary btn--lg" type="button">
+            <span class="material-symbols-outlined" aria-hidden="true">history_edu</span>
+            Open Your First Page
+          </button>
+        </div>
+
+        <div class="cta__newsletter">
+          <label class="label label-sm muted" for="newsletter-email">Subscribe to The Sunday Ink Letter (Prompts &amp; Essays):</label>
+          <form class="newsletter" id="newsletter-form" novalidate>
+            <input type="email" id="newsletter-email" placeholder="your.name@email.com" required aria-label="Email address" />
+            <button class="btn btn-sage" type="submit">Join 34k Scribes</button>
+          </form>
+          <p class="newsletter__msg" id="newsletter-msg" aria-live="polite"></p>
+        </div>
+
+        <p class="cta__quote">"We write to taste life twice, in the moment and in retrospect." — Anaïs Nin</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer injected by js/footer.js -->
+  <div id="site-footer"></div>
+
+  <script src="js/header.js" defer></script>
+  <script src="js/footer.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
