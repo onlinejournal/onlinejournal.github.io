@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  function mount() {
+  function mount() { 
     const host = document.getElementById("site-footer");
     if (!host) return;
 
