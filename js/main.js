@@ -231,15 +231,22 @@
     });
   }
 
-  /* -------------------------------------------------------
-     7. Scroll reveal
+    /* -------------------------------------------------------
+     7. Scroll reveal (progressive enhancement)
      ------------------------------------------------------- */
   function initReveal() {
     const items = document.querySelectorAll(".reveal");
-    if (!items.length || !("IntersectionObserver" in window)) {
-      items.forEach(i => i.classList.add("is-visible"));
+    if (!items.length) return;
+
+    // If IntersectionObserver isn't supported, just show everything.
+    if (!("IntersectionObserver" in window)) {
+      document.documentElement.classList.remove("js-reveal");
       return;
     }
+
+    // Only NOW hide reveal elements (JS is confirmed running).
+    document.documentElement.classList.add("js-reveal");
+
     const io = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -247,22 +254,45 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    }, { threshold: 0.08, rootMargin: "0px 0px -30px 0px" });
 
     items.forEach(el => io.observe(el));
+
+    // Safety net: after 1.5s, force-show anything still hidden
+    // (handles edge cases where observer never fires, e.g. in-app browsers).
+    setTimeout(() => {
+      items.forEach(el => {
+        if (!el.classList.contains("is-visible")) {
+          const rect = el.getBoundingClientRect();
+          // If element is already in the viewport, reveal it.
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add("is-visible");
+          }
+        }
+      });
+    }, 1500);
   }
 
   /* -------------------------------------------------------
      8. Boot
      ------------------------------------------------------- */
   function boot() {
-    initPrompts();
-    initMood();
-    initWordCounter();
-    initCalendar();
-    initTools();
-    initNewsletter();
-    initReveal();
+    // Run reveal LAST so other init failures don't block visibility.
+    try { initPrompts(); }      catch (e) { console.warn("prompts:", e); }
+    try { initMood(); }         catch (e) { console.warn("mood:", e); }
+    try { initWordCounter(); }  catch (e) { console.warn("counter:", e); }
+    try { initCalendar(); }     catch (e) { console.warn("calendar:", e); }
+    try { initTools(); }        catch (e) { console.warn("tools:", e); }
+    try { initNewsletter(); }   catch (e) { console.warn("newsletter:", e); }
+    try { initReveal(); }       catch (e) { console.warn("reveal:", e); }
+
+    // Global safety net — if anything at all went wrong, ensure content is visible.
+    window.addEventListener("load", () => {
+      document.querySelectorAll(".reveal").forEach(el => {
+        const style = getComputedStyle(el);
+        if (style.opacity === "0") el.classList.add("is-visible");
+      });
+    });
   }
 
   if (document.readyState === "loading") {
