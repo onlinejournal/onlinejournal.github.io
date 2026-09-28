@@ -1627,15 +1627,31 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* ===================================================
-   REVEAL ANIMATION
+   REVEAL ANIMATION (progressive enhancement)
+   Content is visible by default. JS adds .js-reveal
+   to <html> and only then are elements hidden pre-reveal.
    =================================================== */
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.is-visible { opacity: 1; transform: none; }
 
-/* Page-turn micro-animation for entry hover */
+/* No-JS / fallback: everything visible */
+.reveal { opacity: 1; transform: none; }
+
+/* When JS is ready, hide reveal elements until observed */
+html.js-reveal .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+html.js-reveal .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  .reveal { opacity: 1; transform: none; }
+  html.js-reveal .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* ===================================================
