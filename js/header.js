@@ -4,7 +4,7 @@
    ========================================================= */
 (function () {
   "use strict";
-
+ 
   const NAV_ITEMS = [
     { label: "Home", path: "home" },
     { label: "My Journal", path: "my-journal" },
